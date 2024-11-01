@@ -51,8 +51,8 @@ class Program
 
        // Console.WriteLine(Environment.CurrentDirectory + "\\data\\personas.csv");
        // Console.ReadKey();
-        //Uno();
-        Dos();
+        Uno();
+        //Dos();
 
         
     }
@@ -64,10 +64,10 @@ class Program
 HUNGC,Hungry Coyote Import Store,Yoshi Latimer,Sales Representative,(503) 555-6874,City Center Plaza 516 Main St.,Elgin,OR,97827,USA
 LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orchestra Terrace,Walla Walla,WA,99362,USA
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA";
-        File.WriteAllText("data\\cust.csv", csvString);
+        File.WriteAllText(@"data\cust.csv", csvString);
 
         // Read into an array of strings.
-        string[] source = File.ReadAllLines("data\\cust.csv");
+        string[] source = File.ReadAllLines(@"data\cust.csv");
         XElement cust = new XElement("Root",
             from str in source
             let fields = str.Split(',')
@@ -87,14 +87,14 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
             )
         );
         Console.WriteLine(cust);
-        File.WriteAllText("data\\cust.xml", cust.ToString());
+        File.WriteAllText(@"data\cust.xml", cust.ToString());
         Console.ReadKey();
 
     }
 
     private static void Uno()
     {
-        string csvData = File.ReadAllText(Environment.CurrentDirectory+"\\data\\personas.csv");
+        string csvData = File.ReadAllText(Environment.CurrentDirectory+@"\data\personas.csv");
 
         // Convertir a XML
         IFormatConverter converter = new XmlConverter();
