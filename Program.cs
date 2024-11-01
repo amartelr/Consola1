@@ -51,7 +51,7 @@ class Program
 
        // Console.WriteLine(Environment.CurrentDirectory + "\\data\\personas.csv");
         //Console.ReadKey();
-        //Uno();
+        Uno();
         Dos();
 
         
