@@ -39,12 +39,9 @@ public class JsonConverter : IFormatConverter
     public string Convert(string csvData)
     {
         // Lógica para convertir CSV a JSON (como en el ejemplo anterior)
-        return csvData +  " JSON";
+        return csvData +  " json";
     }
 }
-
-
-
 
 
 class Program
