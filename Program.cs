@@ -50,7 +50,7 @@ class Program
     {
 
        // Console.WriteLine(Environment.CurrentDirectory + "\\data\\personas.csv");
-        //Console.ReadKey();
+        Console.ReadKey();
         Uno();
         Dos();
 
